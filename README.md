@@ -20,14 +20,14 @@ The primary source of data used here is inventory csv and this file is an open s
 1. Data inspection
 2. Data importation;
 ### EXPLORATORY DATA ANALYSIS (EDA)
-Case Scenario I
+- Case Scenario I
 1. Which product category had the highest sales?
 2. What are the Top 3 and Bottom 3 regions in terms of sales?
 3. What were the total sales of appliances in Ontario?
 4. Advise the management of KMS on what to do to increase the revenue from the bottom
 10 customers
 5. KMS incurred the most shipping cost using which shipping method?
-Case Scenario II
+- Case Scenario II
 6. Who are the most valuable customers, and what products or services do they typically
 purchase?
 7. Which small business customer had the highest sales?
