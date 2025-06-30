@@ -11,8 +11,35 @@ This project contains one repository and it is aimed at analyzing the data and p
 The primary source of data used here is inventory csv and this file is an open source data that can be freely downloaded from an open source online such as kaggle or FRED or any other data repository site.
 ### TOOLS USED 
 - SQL Server [download here] (https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-  a. For data retrieval
-  b. Data filtering
-  c. Data Aggregation
-  d. Data joining 
+  1.  For data retrieval
+  2.  Data filtering
+  3.  Data Aggregation
+  4.  Data joining
+  5.  Data grouping and sorting
+### DATA CLEANING AND PREPARATION
+1. Data inspection
+2. Data importation;
+### EXPLORATORY DATA ANALYSIS (EDA)
+Case Scenario I
+1. Which product category had the highest sales?
+2. What are the Top 3 and Bottom 3 regions in terms of sales?
+3. What were the total sales of appliances in Ontario?
+4. Advise the management of KMS on what to do to increase the revenue from the bottom
+10 customers
+5. KMS incurred the most shipping cost using which shipping method?
+   
+Case Scenario II
+6. Who are the most valuable customers, and what products or services do they typically
+purchase?
+7. Which small business customer had the highest sales?
+8. Which Corporate Customer placed the most number of orders in 2009 - 2012?
+9. Which consumer customer was the most profitable one?
+10. Which customer returned items, and what segment do they belong to?
+11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company
+appropriately spent shipping cost based on the Order priority? Explain your answer 
+### DATA ANALYSIS 
+These are some of the DAX expressions used during my analysis;
+### ANALYSIS 
+### RESULTS AND RECOMMENDATIONS 
+ 
   
