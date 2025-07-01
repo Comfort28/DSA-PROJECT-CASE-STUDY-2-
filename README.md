@@ -17,8 +17,9 @@ The primary source of data used here is inventory csv and this file is an open s
   4.  Data joining
   5.  Data grouping and sorting
 ### DATA CLEANING AND PREPARATION
-1. Data inspection
-2. Data importation;
+1. Data importation; I imported my csv file to my sql server environment using "import flat file".
+2. Data inspection; I inspected the data for quality issues, data type inconsistencies and i also set my order_id column as my primary key. 
+3. Data loading; I loaded my cleaned data set into the sql server to begin analysis.
 ### EXPLORATORY DATA ANALYSIS (EDA)
 - Case Scenario I
 1. Which product category had the highest sales?
@@ -38,6 +39,18 @@ purchase?
 
 ### DATA ANALYSIS 
 These are some of the DAX expressions used during my analysis;
+- ``select top 1 product_category, sum(sales) as total
+from [KMS Sql Case Study]
+group by product_category
+order by total desc ``
+- ``select top 3 region, sales 
+from [KMS Sql Case Study]
+order by sales asc ``
+- ``select top 1 customer_name, sum(sales) as highest_sales
+ from [KMS Sql Case Study]
+ where customer_segment = 'small business'
+ group by Customer_name
+ order by highest_sales desc ``
 ### ANALYSIS 
 ### RESULTS AND RECOMMENDATIONS 
  
