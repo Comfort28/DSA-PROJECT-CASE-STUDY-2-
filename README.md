@@ -39,25 +39,36 @@ purchase?
 
 ### DATA ANALYSIS 
 These are some of the DAX expressions used during my analysis;
-- ``select top 1 product_category, sum(sales) as total
+
+ ``` SQL
+select top 1 product_category, sum(sales) as total
 from [KMS Sql Case Study]
 group by product_category
-order by total desc ``
-- ``select top 3 region, sales 
+order by total desc 
+```
+ ``` SQL
+select top 3 region, sales 
 from [KMS Sql Case Study]
-order by sales asc ``
-- ``select top 1 customer_name, sum(sales) as highest_sales
+order by sales asc
+```
+``` SQL
+ select top 1 customer_name, sum(sales) as highest_sales
  from [KMS Sql Case Study]
  where customer_segment = 'small business'
  group by Customer_name
- order by highest_sales desc ``
+ order by highest_sales desc
+```
 ### ANALYSIS 
 1. Which product category had the highest sales?
-   - ``select top 1 product_category, sum(sales) as total
-from [KMS Sql Case Study]
+   
+``` SQL
+select top 1 product_category, sum(sales) as total
+from [KMS sql Case Study]
 group by product_category
-order by total desc ``
+order by total desc 
+```
 2. What are the Top 3 and Bottom 3 regions in terms of sales?
+   
 ### RESULTS AND RECOMMENDATIONS 
  
   
