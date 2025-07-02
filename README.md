@@ -52,6 +52,12 @@ order by sales asc ``
  group by Customer_name
  order by highest_sales desc ``
 ### ANALYSIS 
+1. Which product category had the highest sales?
+   - ``select top 1 product_category, sum(sales) as total
+from [KMS Sql Case Study]
+group by product_category
+order by total desc ``
+2. What are the Top 3 and Bottom 3 regions in terms of sales?
 ### RESULTS AND RECOMMENDATIONS 
  
   
