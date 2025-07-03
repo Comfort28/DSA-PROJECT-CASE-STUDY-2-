@@ -90,11 +90,14 @@ and region = 'ontario'
 4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 
 ``` SQL
-select customer_name, sum(sales) as revenue
+select top 10 customer_name, sum(sales) as revenue
 from  [KMS Sql Case Study]
 group by Customer_Name
 order by revenue asc
 ```
+- Comment; To increase revenue from the bottom 10, understanding the specific needs and pain points of these customers to tailor services that meet their requirement would go a long way,
+upsell and cross-sell services, identify unmet needs,offer discounts and rebates, optimize retention efforts. These points should be considered clearly by the management to increase revenue from the bottom 10.
+
 5. KMS incurred the most shipping cost using which shipping method?
 
 ``` SQL
@@ -173,6 +176,7 @@ order by highest_sales desc
  group by order_priority, ship_mode
  order by order_priority, ship_mode desc
 ```
+- Comment; from this query written and based on our analysis carried out high priority orders are being shipped via the fastest method(express air) and low priority orders are being shipped via the most economical method (delivery truck) and also high priority orders are also being shipped via a slower method (delivery truck) and low priority orders  are also shipped via an expensive method(express air). so in conclusion, we can say that the company's shipping cost strategy appears to be inconsistent or not well optimized and this could lead to inefficiences and unnecessary expenses.
 
    
 ### RESULTS AND RECOMMENDATIONS 
