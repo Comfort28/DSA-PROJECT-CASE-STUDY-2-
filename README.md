@@ -68,6 +68,112 @@ group by product_category
 order by total desc 
 ```
 2. What are the Top 3 and Bottom 3 regions in terms of sales?
+
+ ``` SQL
+select top 3 Region, sales
+from [KMS Sql Case Study]
+order by sales desc
+```
+``` SQL
+select top 3 region, sales 
+from [KMS Sql Case Study]
+order by sales asc
+```
+3. What were the total sales of appliances in Ontario?
+   
+``` SQL
+select sum(sales) as total_sales 
+from [KMS Sql Case Study]
+where product_sub_category = 'appliances'
+and region = 'ontario'
+```
+4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+
+``` SQL
+select customer_name, sum(sales) as revenue
+from  [KMS Sql Case Study]
+group by Customer_Name
+order by revenue asc
+```
+5. KMS incurred the most shipping cost using which shipping method?
+
+``` SQL
+select top 1 ship_mode, sum(shipping_cost) as total_shipping_cost
+from [KMS Sql Case Study]
+group by ship_mode
+order by total_shipping_cost desc
+```
+- Case Scenario II
+6. Who are the most valuable customers, and what products or services do they typically purchase?
+
+``` SQL
+select top 10 customer_name, sum(sales) as total_spent
+from [KMS Sql Case Study]
+group by customer_name
+order by total_spent desc
+```
+``` SQL
+select top 10 (customer_name), product_name, sum(sales) as total_sales
+from [KMS Sql Case Study]
+where customer_name in (
+select customer_name
+from (
+select top 10 customer_name, sum(sales) as total_spent
+from [KMS Sql Case Study]
+group by customer_name
+order by total_spent desc
+) as top_customers
+)
+group by customer_name, product_name
+order by total_sales desc;
+```
+7. Which small business customer had the highest sales?
+
+``` SQL
+select top 1 customer_name, sum(sales) as highest_sales
+from [KMS Sql Case Study]
+where customer_segment = 'small business'
+group by Customer_name
+order by highest_sales desc
+```
+8. Which Corporate Customer placed the most number of orders in 2009 - 2012?
+
+``` SQL
+ select top 1 customer_name, count(order_id) as total_order
+ from [KMS Sql Case Study]
+ where customer_segment = 'corporate'
+ and order_date between '2009-01-01' and '2012-12-31'
+ group by customer_name
+ order by total_order desc
+```
+9. Which consumer customer was the most profitable one?
+
+``` SQL
+ select top 1 customer_name, sum(profit) as total_profit
+ from [KMS Sql Case Study]
+ where customer_segment = 'consumer'
+ group by customer_name
+ order by total_profit desc
+```
+10. Which customer returned items, and what segment do they belong to?
+
+``` SQL
+ select distinct customer_name, customer_segment
+ from [KMS Sql Case Study]
+ join [dbo].[Order_Status]
+ on [KMS Sql Case Study].Order_ID = [dbo].[Order_Status].Order_ID
+ where Status = 'returned'
+```
+11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the order priority.
+
+``` SQL
+ select count(order_id) as countofid, order_priority, ship_mode, sum(Sales - profit) as estimatedshippingcost, 
+ avg(datediff(day,[order_date], [ship_date])) as avgshipdays
+ from [KMS Sql Case Study]
+ group by order_priority, ship_mode
+ order by order_priority, ship_mode desc
+```
+
    
 ### RESULTS AND RECOMMENDATIONS 
  
