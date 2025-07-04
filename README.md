@@ -177,8 +177,12 @@ order by highest_sales desc
  order by order_priority, ship_mode desc
 ```
 - Comment; from this query written and based on our analysis carried out high priority orders are being shipped via the fastest method(express air) and low priority orders are being shipped via the most economical method (delivery truck) and also high priority orders are also being shipped via a slower method (delivery truck) and low priority orders  are also shipped via an expensive method(express air). so in conclusion, we can say that the company's shipping cost strategy appears to be inconsistent or not well optimized and this could lead to inefficiences and unnecessary expenses.
-
-   
-### RESULTS AND RECOMMENDATIONS 
  
-  
+### RESULTS AND RECOMMENDATIONS 
+- Based on our analysis carried out it revelas that Technology emerges as the top-performing product category, generating the highest sales.
+- Shipping cost insight; Our analysis reveals that KMS incurred the highest shipping costs, primarily due to the use of the DELIVERY TRUCK shipping method.
+
+
+
+
+
